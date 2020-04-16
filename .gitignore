@@ -1,16 +1,29 @@
-# App artifacts
+# Created by https://www.gitignore.io/api/elixir,phoenix
+
+### Elixir ###
 /_build
-/db
+/cover
 /deps
-/*.ez
-
-# Generated on crash by the VM
+/doc
+/.fetch
 erl_crash.dump
+*.ez
+*.beam
 
-# Files matching config/*.secret.exs pattern contain sensitive
-# data and you should not commit them into version control.
-#
-# Alternatively, you may comment the line below and commit the
-# secrets files as long as you replace their contents by environment
-# variables.
-/config/*.secret.exs
+### Elixir Patch ###
+### Phoenix ###
+# Phoenix: a web framework for Elixir
+_build/
+/db
+/*.ez
+/config/prod.secret.exs
+/rel
+
+### DOCKER ###
+# database volume to save database data on container removale
+/volumes
+
+# End of https://www.gitignore.io/api/elixir,phoenix
+
+# mac file system
+.DS_Store
