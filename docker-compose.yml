@@ -1,7 +1,7 @@
 version: '3'
 services:
   api:
-    container_name: api
+    container_name: elixir_api
     build: .
     command: /bin/bash docker_start.sh
     volumes:
@@ -12,7 +12,7 @@ services:
       - database
   database:
     container_name: database
-    image: mariadb:10.2.15
+    image: mariadb:10.4.12
     restart: always
     volumes:
       - "./volumes/datadir:/var/lib/mysql"

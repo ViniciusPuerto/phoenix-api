@@ -1,3 +1,3 @@
-mix phx.new --version
-elixir --version
-echo "It's working !"
+mix deps.get
+mix ecto.create
+exec mix phx.server
